@@ -1,0 +1,16 @@
+package AdvanceAssignment2Day1;
+
+public class ArrayMultidimensional {
+
+	public static void main(String[] args) {
+		
+		int [] [] empInfo = {{1001,1002,1003},{34500,54000,45000}};
+		for(int s=0;s<empInfo.length;s++) {
+			System.out.println(empInfo[s]);
+			for(int k=0;k<empInfo.length;k++) {
+				System.out.print("\t"+empInfo[s][k]);
+			}
+		}
+	}
+
+}

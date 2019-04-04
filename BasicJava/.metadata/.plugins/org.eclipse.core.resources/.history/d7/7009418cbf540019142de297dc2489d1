@@ -1,0 +1,26 @@
+package AdvanceAssignment6MultiThreadedProg;
+
+import AdvanceAssignmentDay4CollectionsGenerics.CustomerInfo;
+
+public class WithdrawTransaction extends Security implements Runnable {
+	
+	
+	private int transactionId;
+	private Account account;
+	private double amount;
+	private CustomerInfo customerId;
+
+	public WithdrawTransaction(int transId,Account acc,double transamount,CustomerInfo custInfo) {
+		this.transactionId=transId;
+		this.account= acc;
+		this.amount = transamount;
+		this.customerId=custInfo;
+	
+	}
+	
+	@Override
+	public void run() {
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.app.doaImplementation;
+
+import java.util.HashMap;
+
+import com.app.bean.UserInfo;
+import com.app.dao.UserManagement;
+
+public class UserManagementImpl implements UserManagement {
+
+	private static HashMap<String, UserInfo> userCreds = new HashMap();
+	
+	@Override
+	public UserInfo validateUser(String userName, String password) {
+		UserInfo user = new UserInfo();
+		if(userCreds.containsKey(userName)) {
+			user = userCreds.get(userName);
+		}
+		return user;
+	}
+
+	@Override
+	public boolean modifyUserInfo(UserInfo userinfo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

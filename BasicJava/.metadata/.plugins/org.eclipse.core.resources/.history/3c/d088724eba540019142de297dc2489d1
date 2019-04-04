@@ -1,0 +1,10 @@
+package AdvanceAssignmentDay4CollectionsGenerics;
+
+public class WellsBank {
+	private static final CustomerDB customerDB = new CustomerDB();
+	private static final Customer
+	public static void main(String[] args) throws Exception{
+		
+	}
+
+}

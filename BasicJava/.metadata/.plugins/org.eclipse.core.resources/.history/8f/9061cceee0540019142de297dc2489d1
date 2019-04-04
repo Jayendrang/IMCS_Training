@@ -1,0 +1,22 @@
+package AdvanceAssignment2Day1;
+
+public class Assignment11ArrayOfObjects {
+
+	public static void main(String[] args) {
+		EmployeeGrades [] employees = new EmployeeGrades[5];
+		
+		employees[0] = new EmployeeGrades(1003, "Raj", 10, 6,9);
+		employees[1] = new EmployeeGrades(1004, "JayaRaj", 10, 9,9);
+		employees[2] = new EmployeeGrades(1005, "SivaRaj", 10, 1,9);
+		employees[3] = new EmployeeGrades(1006, "RajSharma", 1, 6,9);
+		employees[4] = new EmployeeGrades(1007, "RajKumar", 5, 6,9);
+		
+		for(int k=0;k<employees.length;k++) {
+			employees[k].calculateAverageFeedBack();
+			employees[k].calcuateGrade();
+			employees[k].displayInfo();
+		}
+
+	}
+
+}

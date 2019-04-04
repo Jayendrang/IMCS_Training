@@ -1,0 +1,21 @@
+package AdvanceAssignmentDay1;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class Assignment1 {
+
+	public void printCustomers(List<String> arrayLists) {
+		Iterator<String> data = arrayLists.iterator();
+		System.out.println("Customer details are");
+		while(data.hasNext()) {
+			System.out.println("Customer name \t"+data.next());
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

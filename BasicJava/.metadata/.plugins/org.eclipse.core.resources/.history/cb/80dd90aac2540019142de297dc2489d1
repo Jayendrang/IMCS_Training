@@ -1,0 +1,38 @@
+package AdvanceAssignment6MultiThreadedProg;
+
+import AdvanceAssignmentDay4CollectionsGenerics.CustomerInfo;
+
+public class WithdrawTransaction extends Security implements Runnable {
+
+	private int transactionId;
+	private Account account;
+	private double amount;
+	private CustomerInfo customer;
+
+	public WithdrawTransaction(int transId, Account acc, double transamount, CustomerInfo custInfo) {
+		this.transactionId = transId;
+		this.account = acc;
+		this.amount = transamount;
+		this.customer = custInfo;
+
+	}
+
+	public double withdraw(Account account, double amoiunt) throws InsufficientBalanceException {
+
+		if (account.getAccountBalance() >= amoiunt) {
+			throw new InsufficientBalanceException();
+		} else {
+			account.setAccountBalance(account.getAccountBalance() - amoiunt);
+		}
+		return account.getAccountBalance();
+	}
+
+	@Override
+	public void run() {
+		try {
+			authorization(account, customer);
+		} catch (UnAuthorizedWithdrawTransactionException uaAuthorizedWithdrawTransactionException) {
+			System.out.println(uaAuthorizedWithdrawTransactionException.getMessage()+"Transaction Id"+transactionId);
+		}
+	}
+}

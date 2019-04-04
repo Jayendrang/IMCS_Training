@@ -1,0 +1,10 @@
+package com.app.bean;
+
+import java.util.Date;
+
+public class PerishableProduct extends Product {
+	
+	Date expiryDate;
+	
+	
+}

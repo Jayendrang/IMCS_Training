@@ -1,0 +1,27 @@
+package AdvanceAssignment32Reflection;
+
+import java.lang.reflect.Field;
+
+import AdvanceAssignment30CollectionFramework.Employee;
+
+public class TestReflection {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+
+		Class object = Class.forName("AdvanceAssignment30CollectionFramework.Employee");
+		Field[] fields = object.getDeclaredFields();
+		
+		for (Field f : fields) {
+			System.out.print(f.getName());
+			System.out.print("\t"+f.getModifiers());
+			System.out.println();
+			
+			
+		}
+		if (object.getName().contains("Employee")) {
+			object.getClassLoader().loadClass("AdvanceAssignment30CollectionFramework.Employee");
+		}
+
+	}
+
+}

@@ -1,0 +1,48 @@
+package AdvanceAssignmentDay4CollectionsGenerics;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+public class CustomerDB {
+	private static List<CustomerDetails> customerInfoDB = new ArrayList<>();
+
+	public boolean saveNewCustomer(CustomerDetails details) {
+
+		if (!this.equals(details)) {
+			customerInfoDB.add(details);
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	public boolean saveNewCustomers(List<CustomerDetails> details) {
+		if (!details.isEmpty()) {
+			customerInfoDB.addAll(details);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean equals(CustomerDetails data) {
+		// TODO Auto-generated method stub
+		return this.customerInfoDB.stream().anyMatch(a -> a.customerId == data.customerId);
+	}
+
+	public CustomerDetails loanAvailedCustomer(int id) throws NoSuchElementException {
+		return customerInfoDB.stream().findAny().filter(al -> al.getCustomerId() == id).orElse(new CustomerDetails());
+	}
+
+	public void printCustomersListBasedOnLoanStatus() {
+		System.out.println("Loan Availed Customer List");
+		customerInfoDB.stream().map(a -> a).filter(a2 -> a2.loanAvailed == true).sorted()
+				.forEach(a1 -> System.out.println(a1.toString()));
+
+		System.out.println("\nCustomer who hasn't availed loan");
+		customerInfoDB.stream().map(a -> a).filter(a2 -> a2.loanAvailed == false).sorted()
+				.forEach(a1 -> System.out.println(a1.toString()));
+	}
+}

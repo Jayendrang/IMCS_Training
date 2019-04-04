@@ -1,0 +1,78 @@
+package AdvanceAssignmentDay2;
+
+class Loan{
+	int loanNumber,accountNumber,customerNumber,loanDuration;
+	float loanAmount,interest;
+	
+	public Loan(){
+		
+	}
+	
+	public Loan(int loanNo,int accNo,int custNo,int loanDur,float amt,float interest) {
+		this.loanNumber=loanNo;
+		this.accountNumber=accNo;
+		this.customerNumber=custNo;
+		this.loanDuration=loanDur;
+		this.loanAmount=amt;
+		this.interest=interest;
+	}
+
+	public int getLoanNumber() {
+		return loanNumber;
+	}
+
+	public void setLoanNumber(int loanNumber) {
+		this.loanNumber = loanNumber;
+	}
+
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public int getCustomerNumber() {
+		return customerNumber;
+	}
+
+	public void setCustomerNumber(int customerNumber) {
+		this.customerNumber = customerNumber;
+	}
+
+	public int getLoanDuration() {
+		return loanDuration;
+	}
+
+	public void setLoanDuration(int loanDuration) {
+		this.loanDuration = loanDuration;
+	}
+
+	public float getLoanAmount() {
+		return loanAmount;
+	}
+
+	public void setLoanAmount(float loanAmount) {
+		this.loanAmount = loanAmount;
+	}
+
+	public float getInterest() {
+		return interest;
+	}
+
+	public void setInterest(float interest) {
+		this.interest = interest;
+	}
+	
+	
+}
+
+public class Assignment8StaticConcept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/JavaBasicsIMCS/src/BasicAssignment2/InheritanceAssignment.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="BasicAssignment2.InheritanceAssignment"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="1002 H Jayendran 4500.35 Recommendations 12"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="JavaBasicsIMCS"/>
+</launchConfiguration>

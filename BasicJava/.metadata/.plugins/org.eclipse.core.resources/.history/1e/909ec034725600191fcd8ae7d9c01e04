@@ -1,0 +1,66 @@
+package com.app.bean;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Order {
+	
+	String orderId;
+	double totalPrice;
+	List<Product> listOfProduct = new ArrayList<Product>();
+	String orderStatus;
+
+	public Order() {
+
+	}
+
+	public Order(List<Product> data) {
+		this.listOfProduct = data;
+		orderId="ORD";
+	}
+
+	protected void calculateTotalPrice() {
+
+		if (!listOfProduct.isEmpty()) {
+			double tempTotal = 0.0d;
+			for (Product product : listOfProduct) {
+				tempTotal += product.getPricePerUnit();
+			}
+			totalPrice = tempTotal;
+		}
+
+	}
+
+	public String getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(String orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public String getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public List<Product> getListOfProduct() {
+		return listOfProduct;
+	}
+
+	public void setListOfProduct(List<Product> listOfProduct) {
+		this.listOfProduct = listOfProduct;
+	}
+
+}

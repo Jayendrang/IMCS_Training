@@ -1,0 +1,20 @@
+package package2;
+
+import AdvanceAssignment20AccessSpecifier.Base;
+
+public class Child2 {
+
+	public Child2() {	
+	
+	}	
+	public void getValues() {
+		Base base ;
+		
+		//System.out.println(variable3);
+		//System.out.println(base.variable3);
+		//System.out.println(variable4);
+	
+		//	System.out.println(base.variable3);
+		//	System.out.println(super.variable4);
+	}
+}

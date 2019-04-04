@@ -1,0 +1,14 @@
+package AdvanceAssignment6MultiThreadedProg;
+
+public class InsufficientBalanceException extends Exception {
+
+	public InsufficientBalanceException() {
+		System.out.println("Insufficient balance in account");
+	}
+	
+	public InsufficientBalanceException(String acc) {
+		System.out.println("Insufficient balance in account"+acc);
+	}
+	
+	
+}

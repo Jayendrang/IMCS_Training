@@ -1,0 +1,21 @@
+package package2;
+
+import AdvanceAssignment20AccessSpecifier.Base;
+
+public class Child2 extends Base{
+
+	public Child2() {
+	super();
+	}
+	
+	public void getValues() {
+		Base base = new Base();
+		//System.out.println(variable3);
+		//System.out.println(base.variable3);
+		//System.out.println(variable4);
+		int var3= variable3;
+		System.out.println(var3);
+	//	System.out.println(base.variable3);
+	//	System.out.println(super.variable4);
+	}
+}

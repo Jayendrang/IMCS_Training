@@ -1,0 +1,19 @@
+package AdvanceAssignment22AutoBoxingAndUnboxing;
+
+import java.util.Vector;
+
+public class EmployeeInfo {
+
+	public static void main(String[] args) {
+
+		Vector emplist = new Vector();
+		int empNo=1000;
+		for(int s=0;s<5;s++) {
+			empNo++;
+			emplist.add(empNo);
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,64 @@
+package AdvanceAssignment2Day1;
+
+class EmployeesGrade {
+	int employeeNumber;
+	String employeeName;
+	float customerFeedback1 = 0, customerFeedback2 = 0, customerFeedback3 = 0;
+	double averageFeedback;
+	char grade;
+
+	public void initializeEmployee(int eNum, String name, float custFb1, float custFb2, float custFb3) {
+		this.employeeNumber = eNum;
+		this.employeeName = name;
+		this.customerFeedback1 = custFb1;
+		this.customerFeedback2 = custFb2;
+		this.customerFeedback3 = custFb3;
+	}
+
+	public void initializeEmployee(int eNum, String name, float custFb1, float custFb2) {
+		this.employeeNumber = eNum;
+		this.employeeName = name;
+		this.customerFeedback1 = custFb1;
+		this.customerFeedback2 = custFb2;
+
+	}
+
+	public void calculateAverageFeedBack() {
+		this.averageFeedback = (customerFeedback1 + customerFeedback2 + customerFeedback3) / 3;
+	}
+
+	public void calcuateGrade() {
+		if (averageFeedback > 4 && averageFeedback < 6) {
+			grade = 'C';
+		} else if (averageFeedback > 6 && averageFeedback < 8) {
+			grade = 'B';
+		} else if (averageFeedback > 8 && averageFeedback <= 10) {
+			grade = 'A';
+		}
+	}
+
+	public void displayInfo() {
+		System.out.println("Name \t" + employeeName + "\nID \t" + employeeNumber + "\nAverage Feedback \t"
+				+ averageFeedback + "\nGrade \t" + grade + "\n ---------------------");
+
+	}
+
+}
+
+public class Assignment9Overloading {
+
+	public static void main(String[] args) {
+
+		EmployeesGrade employee1 = new EmployeesGrade();
+		employee1.initializeEmployee(1002, "Raj", 10, 6);
+		employee1.calculateAverageFeedBack();
+		employee1.calcuateGrade();
+		employee1.displayInfo();
+		
+		employee1.initializeEmployee(1003, "Raj", 10, 6,9);
+		employee1.calculateAverageFeedBack();
+		employee1.calcuateGrade();
+		employee1.displayInfo();
+	}
+
+}

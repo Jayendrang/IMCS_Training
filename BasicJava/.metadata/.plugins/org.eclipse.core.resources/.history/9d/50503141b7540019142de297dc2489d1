@@ -1,0 +1,67 @@
+package AdvanceAssignmentDay1;
+
+import java.util.Comparator;
+
+class CustomerDetails implements Comparable<CustomerDetails>, Comparator<CustomerDetails> {
+
+	int customerId;
+	String customerName;
+	boolean loanAvailed;
+
+	public CustomerDetails() {
+	}
+
+	public CustomerDetails(int id, String name, boolean loanstatus) {
+		this.customerId = id;
+		this.customerName = name;
+		this.loanAvailed = loanstatus;
+	}
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public boolean isLoanAvailed() {
+		return loanAvailed;
+	}
+
+	public void setLoanAvailed(boolean loanAvailed) {
+		this.loanAvailed = loanAvailed;
+	}
+
+	@Override
+	public String toString() {
+		return this.customerName + "\t" + this.customerId + "\t" + this.loanAvailed;
+	}
+
+	@Override
+	public int compare(CustomerDetails o1, CustomerDetails o2) {
+		return o1.getCustomerId() - o2.getCustomerId();
+
+	}
+
+	@Override
+	public int compareTo(CustomerDetails customer) {
+		return this.customerId - customer.customerId;
+	}
+}
+
+public class Assignment4CollectionsAndGenerics {
+
+	public static void main(String[] args) {
+
+	}
+
+}

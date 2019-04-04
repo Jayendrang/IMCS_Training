@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=JavaBasicsIMCS/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1536676262000"/>
+<typeInfo handle="=JavaBasicsIMCS/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1536676262000"/>
+<typeInfo handle="=IMCSSShoppingApp/src&lt;com.app.bean{Product.java[Product" modifiers="1" timestamp="1554252250000"/>
+<typeInfo handle="=IMCSSShoppingApp/src&lt;com.app.dao{Inventory.java[Inventory" modifiers="513" timestamp="1554257436000"/>
+<typeInfo handle="=IMCSSShoppingApp/src&lt;com.app.dao{UserManagement.java[UserManagement" modifiers="513" timestamp="1554250598000"/>
+</typeInfoHistroy>

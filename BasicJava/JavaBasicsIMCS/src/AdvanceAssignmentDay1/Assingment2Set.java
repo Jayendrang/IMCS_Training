@@ -1,0 +1,35 @@
+package AdvanceAssignmentDay1;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Assingment2Set {
+
+	public void PrintSetSample(Set<String> data) {
+		if (data.isEmpty()) {
+			System.out.println("Set is an empty set");
+		} else {
+			System.out.println("Set elements " + data);
+		}
+	}
+
+	public static void main(String[] args) {
+
+		Set<String> data = new HashSet<String>() {
+			{
+				add("Diva");
+				add("Kumaar");
+				add("Raja");
+				add("Muthu");
+				add("Ponni");
+			}
+		};
+		
+		Assingment2Set asngSet = new Assingment2Set();
+		
+		asngSet.PrintSetSample(data);
+		asngSet.PrintSetSample(data = new HashSet<>());
+
+	}
+
+}

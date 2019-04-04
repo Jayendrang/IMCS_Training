@@ -1,0 +1,20 @@
+package com.app.doaImplementation;
+
+import com.app.bean.UserInfo;
+import com.app.dao.UserManagement;
+
+public class UserManagementImpl implements UserManagement {
+
+	@Override
+	public UserInfo validateUser(String userName, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean modifyUserInfo(UserInfo userinfo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

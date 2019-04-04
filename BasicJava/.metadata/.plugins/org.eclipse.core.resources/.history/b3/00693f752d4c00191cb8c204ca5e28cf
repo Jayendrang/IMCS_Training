@@ -1,0 +1,29 @@
+package Assignment2;
+
+class Student {
+
+	int student_id;
+	char student_type;
+
+	public Student() {
+		this.student_id=10;
+		this.student_type='F';
+	}
+	public int getStudent_id() {
+		return student_id;
+	}
+
+	public char getStudent_type() {
+		return student_type;
+	}
+
+}
+
+public class Constructor {
+
+	public static void main(String[] args) {
+		Student st1 = new Student();
+		System.out.println(st1.getStudent_id()+"--------"+st1.getStudent_type());
+	}
+
+}

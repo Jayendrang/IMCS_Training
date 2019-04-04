@@ -1,0 +1,21 @@
+package AdvanceAssignment31Generics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GenericsSample {
+
+	public static void main(String[] args) {
+	
+		List data = new ArrayList();
+		data.add(1);
+		data.add(2.0d);
+		data.add("3");
+		
+		for(int s=0;s<data.size();s++) {
+			System.out.println(data.get(s));
+		}
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package AdvanceAssignment33Annotations;
+
+public class StringMock {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

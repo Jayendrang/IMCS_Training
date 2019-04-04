@@ -1,0 +1,17 @@
+package AdvanceAssignmentDay2;
+
+class Loan{
+	int loanNumber,accountNumber,customerNumber,loanDuration;
+	float loanAmount,interest;
+	
+	
+}
+
+public class Assignment8StaticConcept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

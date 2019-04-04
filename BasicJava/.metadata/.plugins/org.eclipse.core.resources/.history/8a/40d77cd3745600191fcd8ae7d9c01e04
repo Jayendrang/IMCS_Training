@@ -1,0 +1,54 @@
+package com.app.doaImplementation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.javatuples.Triplet;
+
+import com.app.bean.Order;
+import com.app.bean.Product;
+import com.app.bean.UserInfo;
+import com.app.dao.SalesManagement;
+
+public class SalesManagementImpl implements SalesManagement {
+	private static int orderNumber = 0;
+	private List<Triplet<String, String, Order>> salesInformation = new ArrayList();
+
+	@Override
+	public String placeOrder(UserInfo user, Order orders) {
+
+		String orderId = orders.getOrderId() + orderNumber;
+		orders.setOrderId(orderId);
+		salesInformation.add(new Triplet<String, String, Order>(orderId, user.getUserName(), orders));
+		return orderId;
+	}
+
+	@Override
+	public boolean cancelOrder(String orders) {
+
+		for (Triplet<String, String, Order> data : salesInformation) {
+			if (data.getValue0().equals(orders)) {
+				salesInformation.remove(orders);
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public static void main(String[] args) {
+			
+		
+		SalesManagementImpl impl = new SalesManagementImpl();
+		UserInfo user = new UserInfo("Jay","Jay", "AR", "1234 5614 1234 1101");
+		List<Product> products = new ArrayList() {{
+			add(new Product("1001", "Bath Soap", "Cosmetics", "Non perishable", 0, 12.2d));
+			add(new Product("1002", "Apple", "Fruits", "perishable", 0, 3.6d));
+			add(new Product("1003", "Cucumber", "Veggie", "perishable", 0, 0.12d));
+		}};
+		Order order = new Order(products);
+		impl.placeOrder(user, order);
+		
+		
+	}
+}

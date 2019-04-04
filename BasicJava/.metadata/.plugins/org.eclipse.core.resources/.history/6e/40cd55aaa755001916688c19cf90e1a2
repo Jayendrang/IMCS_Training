@@ -1,0 +1,50 @@
+package com.app.doaImplementation;
+
+import java.util.Date;
+import java.util.HashMap;
+
+import com.app.bean.NonPerishableProduct;
+import com.app.bean.PerishableProduct;
+import com.app.bean.Product;
+import com.app.dao.Inventory;
+
+public class InventoryManagementImpl implements Inventory {
+
+	private static int productId;
+	private static HashMap<String, PerishableProduct> perishableProduct = new HashMap<String, PerishableProduct>();
+	private static HashMap<String, NonPerishableProduct> nonPerishableProduct = new HashMap<String, NonPerishableProduct>();
+
+	@Override
+	public void addNewProduct(Product product, boolean isPerishable) {
+		productId++;
+		if(isPerishable) {
+			PerishableProduct preshable = new PerishableProduct(product.getProductId(),
+					product.getProductName(), product.getProductCategory(),
+					product.getProductType(), product.getStock(),product.getPricePerUnit(), new Date(2020,12, 31), true)
+			perishableProduct.put(product.getProductName()+productId, preshable);
+			
+		}
+		
+	}
+
+	@Override
+	public void deleteProduct(Product product) {
+
+	}
+
+	@Override
+	public void modifyProduct(Product product) {
+
+	}
+
+	@Override
+	public void getProduct(Product product) {
+
+	}
+
+	@Override
+	public void getAllProducts() {
+
+	}
+
+}

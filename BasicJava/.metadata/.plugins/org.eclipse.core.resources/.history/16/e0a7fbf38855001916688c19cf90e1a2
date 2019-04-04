@@ -1,0 +1,11 @@
+package AdvanceAssingment25CheckedException;
+
+public class CheckedExceptionDemo {
+
+	public static void main(String[] args) {
+	
+		Class.forName(AdvanceAssingment25CheckedException.ExceptionDemo);
+
+	}
+
+}

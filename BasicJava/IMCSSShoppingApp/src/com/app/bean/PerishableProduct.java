@@ -1,0 +1,37 @@
+package com.app.bean;
+
+import java.util.Date;
+
+public class PerishableProduct extends Product {
+
+	Date expiryDate;
+	boolean isFrosen;
+
+	public PerishableProduct() {
+
+	}
+
+	public PerishableProduct(String prodId, String prodName, String prodCat, String type, int stock, double ppu,
+			Date expirydate, boolean isfrosen) {
+		super(prodId, prodName, prodCat, type, stock, ppu);
+		this.expiryDate = expirydate;
+		this.isFrosen = isfrosen;
+	}
+
+	public boolean isFrosen() {
+		return isFrosen;
+	}
+
+	public void setFrosen(boolean isFrosen) {
+		this.isFrosen = isFrosen;
+	}
+
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+}

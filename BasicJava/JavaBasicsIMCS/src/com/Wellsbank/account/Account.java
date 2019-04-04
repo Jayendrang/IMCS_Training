@@ -1,0 +1,34 @@
+package com.Wellsbank.account;
+
+import com.Wellsbank.customer.*;
+
+class Account {
+	int accountNumber;
+	Customer customer;
+	double balance;
+
+	public Account() {
+	}
+
+	public Account(int accNo, Customer tCustomer, double bal) {
+		this.accountNumber = accNo;
+		this.customer = tCustomer;
+		this.balance = bal;
+
+	}
+
+	public Customer getCustomer() {
+		return this.customer;
+	}
+
+	public double balanceEnquiry() {
+		return this.balance;
+	}
+
+	public void deposit(double amt) {
+		this.balance += amt;
+		System.out.println("Balance after deposit\t$"+this.balance);
+	}
+	
+
+}

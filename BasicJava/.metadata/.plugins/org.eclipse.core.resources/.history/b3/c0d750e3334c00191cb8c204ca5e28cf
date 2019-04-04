@@ -1,0 +1,28 @@
+package Assignment2;
+
+class Students{
+	
+	int studentId;
+	char type;
+	String studentName;
+	
+	public Students() {
+	}
+	
+	public Students(int lid,char ltype,String name) {
+		this.studentId=lid;
+		this.type=ltype;
+		this.studentName=name;
+		
+	}
+	
+}
+
+public class StringExample {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

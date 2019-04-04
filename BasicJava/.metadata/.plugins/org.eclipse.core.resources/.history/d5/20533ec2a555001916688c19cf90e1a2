@@ -1,0 +1,12 @@
+package com.app.dao;
+
+import java.util.List;
+
+import com.app.bean.Order;
+
+public interface SalesManagement {
+
+	public double placeOrder(Order orders);
+	public boolean cancelOrder(Order orders);
+	
+}

@@ -1,0 +1,12 @@
+package com.app.bean;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Order {
+
+	int orderId;
+	double totalPrice;
+	List<Product> listOfProduct = new ArrayList<Product>();
+	
+}

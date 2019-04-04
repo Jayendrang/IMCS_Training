@@ -1,0 +1,24 @@
+package com.app.doaImplementation;
+
+import com.app.bean.Order;
+import com.app.bean.UserInfo;
+import com.app.dao.SalesManagement;
+
+public class SalesManagementImpl implements SalesManagement{
+
+	
+	
+	@Override
+	public double placeOrder(UserInfo user, Order orders) {
+		
+		
+		return 0;
+	}
+
+	@Override
+	public boolean cancelOrder(Order orders) {
+
+		return false;
+	}
+
+}

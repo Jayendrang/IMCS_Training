@@ -1,0 +1,30 @@
+package AdvanceAssignment33Annotations;
+
+public class StringMock {
+
+	String capacity;
+	
+	public StringMock() {
+	
+	}
+	
+	@Deprecated
+	public static int search(String data,char searchChar)
+	{
+		int index=-1;
+		char []tData = data.toCharArray();
+		for(int s=0;s<tData.length;s++) {
+			
+			if(searchChar==tData[s]) {
+				index=s;
+			}
+		}
+		return index;
+	}
+	public static void main(String[] args) {
+		
+		System.out.println(StringMock.search("Jayendran", 'a'));
+
+	}
+
+}

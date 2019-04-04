@@ -1,0 +1,8 @@
+package AdvanceJavaAssignmentPart1;
+
+public class WellsBankAccounts {
+	private String accountNumber;
+	private String accountType;
+	private String balance;
+	
+}

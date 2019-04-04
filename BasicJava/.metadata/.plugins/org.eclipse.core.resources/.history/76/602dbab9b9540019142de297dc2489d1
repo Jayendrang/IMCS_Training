@@ -1,0 +1,65 @@
+package AdvanceAssignmentDay4CollectionsGenerics;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class CustomerDB {
+	private static List<CustomerInfo> customerInfoDB = new ArrayList<>();
+
+	public boolean saveNewCustomer(CustomerInfo details) {
+
+		if (!this.equals(details)) {
+			customerInfoDB.add(details);
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	public boolean saveNewCustomers(List<CustomerInfo> details) {
+		if (!details.isEmpty()) {
+			customerInfoDB.addAll(details);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean equals(CustomerInfo data) {
+		// TODO Auto-generated method stub
+		return this.customerInfoDB.stream().anyMatch(a -> a.customerId == data.customerId);
+	}
+
+	public CustomerInfo loanAvailedCustomer(int id) throws NoSuchElementException {
+		return customerInfoDB.stream().findAny().filter(al -> al.getCustomerId() == id).orElse(new CustomerInfo());
+	}
+
+	public Set<Integer> getLoanAvailedCustomers() {
+		Set<Integer> loanAvailedCustomers = new TreeSet<Integer>();
+		Iterator<CustomerInfo> customerIterator = customerInfoDB.iterator();
+		while(customerIterator.hasNext()) {
+			CustomerInfo  tCustomerInfo = customerIterator.next();
+			if(tCustomerInfo.loanAvailed) {
+				loanAvailedCustomers.add(tCustomerInfo.getCustomerId());
+			}
+			
+		}
+		
+		return loanAvailedCustomers;
+	}
+	
+	public void printCustomersListBasedOnLoanStatus() {
+		System.out.println("Loan Availed Customer List");
+		customerInfoDB.stream().map(a -> a).filter(a2 -> a2.loanAvailed == true).sorted()
+				.forEach(a1 -> System.out.println(a1.toString()));
+
+		System.out.println("\nCustomer who hasn't availed loan");
+		customerInfoDB.stream().map(a -> a).filter(a2 -> a2.loanAvailed == false).sorted()
+				.forEach(a1 -> System.out.println(a1.toString()));
+	}
+}

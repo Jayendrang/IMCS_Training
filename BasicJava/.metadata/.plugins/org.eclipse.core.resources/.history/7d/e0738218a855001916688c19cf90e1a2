@@ -1,0 +1,61 @@
+package com.app.doaImplementation;
+
+import java.util.Date;
+import java.util.HashMap;
+
+import com.app.bean.NonPerishableProduct;
+import com.app.bean.PerishableProduct;
+import com.app.bean.Product;
+import com.app.dao.Inventory;
+
+public class InventoryManagementImpl implements Inventory {
+
+	private static int productId;
+	private static HashMap<String, PerishableProduct> perishableProduct = new HashMap<String, PerishableProduct>();
+	private static HashMap<String, NonPerishableProduct> nonPerishableProduct = new HashMap<String, NonPerishableProduct>();
+
+	@Override
+	public void addNewProduct(Product product, boolean isPerishable) {
+		productId++;
+		if (isPerishable) {
+			PerishableProduct preshable = new PerishableProduct(product.getProductId(), product.getProductName(),
+					product.getProductCategory(), product.getProductType(), product.getStock(),
+					product.getPricePerUnit(), new Date(2020, 12, 31), true);
+			perishableProduct.put(product.getProductName() + productId, preshable);
+
+		}else {
+			NonPerishableProduct nonpreshable = new NonPerishableProduct(product.getProductId(), product.getProductName(),
+					product.getProductCategory(), product.getProductType(), product.getStock(),
+					product.getPricePerUnit(), new Date(2020, 12, 31));
+			nonPerishableProduct.put(product.getProductName() + productId, nonpreshable);
+		}
+
+	}
+
+	@Override
+	public void deleteProduct(String product) {
+		if(perishableProduct.containsKey(product)) {
+			
+		}else if(nonPerishableProduct.containsKey(product)) {
+			
+		}else {
+			System.out.println("Product not available");
+		}
+	}
+
+	@Override
+	public void modifyProduct(Product product) {
+
+	}
+
+	@Override
+	public void getProduct(Product product) {
+
+	}
+
+	@Override
+	public void getAllProducts() {
+
+	}
+
+}

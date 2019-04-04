@@ -1,0 +1,19 @@
+package com.app.dao;
+
+import java.util.HashMap;
+
+import com.app.bean.Product;
+
+public interface Inventory {
+
+	public void addNewProduct(Product product);
+
+	public void deleteProduct(Product product);
+
+	public void modifyProduct(Product product);
+
+	public void getProduct(Product product);
+
+	public void getAllProducts();
+
+}

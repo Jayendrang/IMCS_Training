@@ -1,0 +1,17 @@
+package AdvanceAssignment23UnhandledException;
+
+public class UnhandledExceptions {
+
+	public static void main(String[] args) {
+	
+		String name=null;
+		try {
+		System.out.println(name.length());
+		name="John";
+		System.out.println(name.length());
+		}catch(NullPointerException npe) {
+			System.out.println("The Object is\t"+npe.getMessage());
+		}
+	}
+
+}

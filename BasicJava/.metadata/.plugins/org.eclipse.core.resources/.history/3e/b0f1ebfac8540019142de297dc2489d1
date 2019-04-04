@@ -1,0 +1,34 @@
+package AdvanceAssignment6MultiThreadedProg;
+
+import AdvanceAssignmentDay4CollectionsGenerics.CustomerInfo;
+
+public class WellsBank {
+
+	public static void main(String[] args) {
+	
+		CustomerInfo customer = new CustomerInfo(1001,"RajKumar",false);
+		Account account = new Account(10020, customer, 10000d);
+		
+		CustomerInfo customer1 = new CustomerInfo(1002,"SivaKumar",false);
+		Account account1 = new Account(10020, customer1, 20000d);
+		
+		DepositTransaction depositTransaction = new DepositTransaction(90002, account, 1001, 2000);
+		depositTransaction.start();
+		
+		DepositTransaction depositTransaction1 = new DepositTransaction(90005, account1, 1002, 1000);
+		depositTransaction1.start();
+
+		
+		WithdrawTransaction withdrawTransaction = new WithdrawTransaction(80002, account1, 100, customer);
+		Thread secondWithdraw = new Thread(withdrawTransaction);
+		secondWithdraw.start();
+		
+		WithdrawTransaction withdrawTransaction2 = new WithdrawTransaction(80001, account, 100, customer);
+		Thread secondWithdraw2 = new Thread(withdrawTransaction);
+		secondWithdraw2.start();
+		
+		
+		
+	}
+
+}

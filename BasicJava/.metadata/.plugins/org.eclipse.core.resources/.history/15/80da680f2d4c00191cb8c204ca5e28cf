@@ -1,0 +1,24 @@
+package Assignment2;
+
+class Student {
+
+	int student_id;
+	char student_type;
+
+	public int getStudent_id() {
+		return student_id;
+	}
+
+	public char getStudent_type() {
+		return student_type;
+	}
+
+}
+
+public class Constructor {
+
+	public static void main(String[] args) {
+
+	}
+
+}

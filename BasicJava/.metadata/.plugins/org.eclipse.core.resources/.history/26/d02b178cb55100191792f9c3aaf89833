@@ -1,0 +1,13 @@
+package AdvanceJavaAssignmentPart1;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class TresuryManager {
+
+	private static Set<WellsBankAccounts> accountDetails = new HashSet<WellsBankAccounts>();
+	
+	public void addNewAccount(WellsBankAccounts account) {
+		accountDetails.add(account);
+	}
+}

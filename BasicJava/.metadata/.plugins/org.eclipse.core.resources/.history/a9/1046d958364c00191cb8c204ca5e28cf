@@ -1,0 +1,72 @@
+package Assignment2;
+
+class StudentInfo{
+	
+	int studentId;
+	String studentName;
+	String resedentialStatus;
+	int feesPerMonth;
+	
+	
+	public StudentInfo() {
+	}
+	
+	public StudentInfo(int lid,String name,String status,int fees) {
+		this.studentId=lid;
+		this.studentName=name;
+		this.resedentialStatus=status;
+		this.feesPerMonth=fees;
+		
+	}
+
+	public int getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String lname) {
+		this.studentName =lname;
+	}
+	
+	
+	public String getResedentialStatus() {
+		return resedentialStatus;
+	}
+
+	public void setResedentialStatus(String resedentialStatus) {
+		this.resedentialStatus = resedentialStatus;
+	}
+
+	public int getFeesPerMonth() {
+		return feesPerMonth;
+	}
+
+	public void setFeesPerMonth(int feesPerMonth) {
+		this.feesPerMonth = feesPerMonth;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.studentId+"\n"+"\n"+this.studentName+"\n"+this.resedentialStatus
+				+"\n"+this.feesPerMonth;
+	}
+	
+}
+
+public class CommandLineArgs {
+
+	public static void main(String[] args) {
+	
+		
+	}
+
+}

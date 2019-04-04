@@ -1,0 +1,11 @@
+package AdvanceAssignment28ClassObjects;
+
+class Customer{
+	int customerId;
+	String name, address;
+	int pincode;
+	
+}
+public class WellsBank {
+
+}

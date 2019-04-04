@@ -1,0 +1,19 @@
+package AdvanceAssignmentDay1;
+
+import java.util.Set;
+
+public class Assingment2Set {
+
+	public void PrintSetSample(Set<String> data) {
+		if(data.isEmpty()) {
+			System.out.println("Set is an empty set");
+		}else {
+			System.out.println("Set elements "+data);
+		}
+	}
+	
+	public static void main(String[] args) {
+	
+	}
+
+}

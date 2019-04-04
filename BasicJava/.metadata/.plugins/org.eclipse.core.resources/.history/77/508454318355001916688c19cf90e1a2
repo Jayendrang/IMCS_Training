@@ -1,0 +1,5 @@
+package AdvanceAssignmentInterface;
+
+public interface PetAnimal {
+
+}

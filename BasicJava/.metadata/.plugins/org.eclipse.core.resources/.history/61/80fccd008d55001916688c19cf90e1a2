@@ -1,0 +1,24 @@
+package AdvanceAssignment32Reflection;
+
+import AdvanceAssignment30CollectionFramework.Employee;
+
+public class TestReflection {
+
+	
+	public static void main(String[] args) {
+	
+		try {
+			Class object = Class.forName("AdvanceAssignment30CollectionFramework.Employee");
+			System.out.println(object.getName());
+			if(object.getName().contains("Employee")) {
+				object.getClassLoader().loadClass("AdvanceAssignment30CollectionFramework.Employee");
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

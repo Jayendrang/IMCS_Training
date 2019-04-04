@@ -1,0 +1,12 @@
+package AdvanceAssignment27JavaBeans;
+
+import java.util.Calendar;
+
+public class Employee {
+
+	int employeeId;
+	String employeeName;
+	Calendar dob;
+	
+	
+}

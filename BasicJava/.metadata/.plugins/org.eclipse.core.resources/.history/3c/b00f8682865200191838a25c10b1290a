@@ -1,0 +1,87 @@
+package AdvanceJavaAssignmentPart1;
+
+public class WellsBankTransaction extends Thread {
+
+	private static int transactionId;
+	private WellsBankAccounts accounts;
+	private TresuryManager tresuryManager;
+	private double transactionAmount;
+	private String transactionType;
+
+	public WellsBankTransaction() {
+
+	}
+
+	public WellsBankTransaction(WellsBankAccounts account, double transAmount, String transtype) {
+		this.accounts = account;
+		this.transactionAmount = transAmount;
+		this.transactionType = transtype;
+		this.transactionId += 1;
+	}
+
+	synchronized public void performTransaction() throws ApplicationException {
+		TresuryManager tresuryManager = new TresuryManager();
+
+		if (this.getTransactionType().equals("DEP")) {
+			WellsBankAccounts tempAccount = tresuryManager.getAccountInfo(new WellsBankAccounts(
+					this.getAccounts().getAccountNumber(), this.getAccounts().getAccountType(), 0.0d, null));
+			tempAccount.setBalance(tempAccount.getBalance() + this.getTransactionAmount());
+			this.setAccounts(tresuryManager.updateAccountBalance(tempAccount));
+
+		} else if (this.getTransactionType().equals("WID")) {
+
+			WellsBankAccounts tempAccount = tresuryManager.getAccountInfo(new WellsBankAccounts(
+					this.getAccounts().getAccountNumber(), this.getAccounts().getAccountType(), 0.0d, null));
+			tempAccount.setBalance(tempAccount.getBalance() - this.getTransactionAmount());
+			this.setAccounts(tresuryManager.updateAccountBalance(tempAccount));
+
+		} else {
+			throw new ApplicationException("Transaction setup missmatch");
+		}
+
+	}
+
+	@Override
+	public void run() {
+		try {
+			performTransaction();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+
+		}
+
+	}
+
+	public static int getTransactionId() {
+		return transactionId;
+	}
+
+	public static void setTransactionId(int transactionId) {
+		WellsBankTransaction.transactionId = transactionId;
+	}
+
+	public WellsBankAccounts getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(WellsBankAccounts accounts) {
+		this.accounts = accounts;
+	}
+
+	public double getTransactionAmount() {
+		return transactionAmount;
+	}
+
+	public void setTransactionAmount(double transactionAmount) {
+		this.transactionAmount = transactionAmount;
+	}
+
+	public String getTransactionType() {
+		return transactionType;
+	}
+
+	public void setTransactionType(String transactionType) {
+		this.transactionType = transactionType;
+	}
+
+}

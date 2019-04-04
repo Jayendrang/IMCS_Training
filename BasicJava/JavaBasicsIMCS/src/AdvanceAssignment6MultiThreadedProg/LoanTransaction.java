@@ -1,0 +1,34 @@
+package AdvanceAssignment6MultiThreadedProg;
+
+public class LoanTransaction implements Runnable {
+
+	private BankFund bankFund;
+	
+	private int customerId;
+	
+	private double loanAmount;
+	
+	public LoanTransaction(BankFund fund, int custId,double loadnAmt) {
+	this.bankFund=fund;
+	this.customerId=custId;
+	this.loanAmount=loadnAmt;
+	}
+	
+	@Override
+	public void run()  {
+		try {
+			bankFund.checkFund(loanAmount);
+			Thread.sleep((long)(2000*Math.random()));
+			double fundavailable= bankFund.debitFund(loanAmount);
+			System.out.println("Loan disbursd, verify with teller");
+			System.out.println("Fund left in the bank"+loanAmount);	
+		}catch(InsufficientBalanceException exception) {
+			System.out.println("Please try someother day, short of funds"+exception.getMessage());
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
+	}
+	
+
+}

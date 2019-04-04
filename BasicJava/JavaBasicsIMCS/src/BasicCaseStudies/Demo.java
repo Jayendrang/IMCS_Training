@@ -1,0 +1,102 @@
+package BasicCaseStudies;
+
+enum ModeOfTravel {
+	FLIGHT(500), TRAIN(100), BUS(50);
+	private final int modeOfTravel;
+
+	private ModeOfTravel(int mode) {
+		this.modeOfTravel = mode;
+	}
+
+	public int getModeOfTravelCharge() {
+		return this.modeOfTravel;
+	}
+}
+
+class Travel {
+
+	char modeOfTravel;
+	int numberOfTickets;
+	double amount;
+	int travels_code;
+
+	public Travel() {
+
+	}
+
+	public int getTravels_code() {
+		return travels_code;
+	}
+
+	public void setTravels_code(int travels_code) {
+		this.travels_code = travels_code;
+	}
+
+	public char getModeOfTravel() {
+		return modeOfTravel;
+	}
+
+	public void setModeOfTravel(char modeOfTravel) {
+		this.modeOfTravel = modeOfTravel;
+	}
+
+	public int getNumberOfTickets() {
+		return numberOfTickets;
+	}
+
+	public void setNumberOfTickets(int numberOfTickets) {
+		this.numberOfTickets = numberOfTickets;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+
+		Travel travel = new Travel();
+		travel.setModeOfTravel('F');
+		travel.setAmount(500);
+		travel.setNumberOfTickets(3);
+		travel.setTravels_code(101);
+	
+		
+
+		if (travel.getModeOfTravel() == 'F') {
+			int ticketFare = travel.getNumberOfTickets() * ModeOfTravel.FLIGHT.getModeOfTravelCharge();
+			String confirmationNumber = ConfirmationNumberGenerator.GenerateConfirmationNumber(travel.getTravels_code(),travel.getModeOfTravel(),11);
+			System.out.println(
+					"Travel Mode : " + ModeOfTravel.FLIGHT + "\n Number of Travelers : " + travel.getNumberOfTickets()
+							+ "\n Base Ticket amount Amount : " + travel.getAmount() + "\n --------------------"
+							+ "\n Total fare including Service Charge : " + (ticketFare + travel.getAmount())
+							+"\n Confirmation Number  :"+confirmationNumber);
+			
+		} else if (travel.getModeOfTravel() == 'B') {
+			int ticketFare = travel.getNumberOfTickets() * ModeOfTravel.BUS.getModeOfTravelCharge();
+
+			System.out.println(
+					"Travel Mode : " + ModeOfTravel.BUS + "\n Number of Travelers : " + travel.getNumberOfTickets()
+							+ "\n Base Ticket amount Amount : " + travel.getAmount() + "\n --------------------"
+							+ "\n Total fare including Service Charge : " + (ticketFare + travel.getAmount()));
+		} else if (travel.getModeOfTravel() == 'T') {
+			int ticketFare = travel.getNumberOfTickets() * ModeOfTravel.BUS.getModeOfTravelCharge();
+			System.out.println(
+					"Travel Mode : " + ModeOfTravel.TRAIN + "\n Number of Travelers : " + travel.getNumberOfTickets()
+							+ "\n Base Ticket amount Amount : " + travel.getAmount() + "\n --------------------"
+							+ "\n Total fare including Service Charge : " + (ticketFare + travel.getAmount()));
+
+		} else {
+			System.out.println("Mode of travel not selected.....!");
+		}
+
+	}
+
+}

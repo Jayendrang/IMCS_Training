@@ -1,0 +1,17 @@
+package AdvanceAssignment2Day1;
+
+public class ClassAndObjects {
+
+	private String id;
+	private String name;
+	private String address;
+	private String pincode;
+	
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package AdvanceJavaAssignmentPart1;
+
+public class WellsBankTransactionManager {
+
+	public static void main(String[] args) {
+
+		TresuryManager tresuryManager = new TresuryManager();
+		tresuryManager.addNewAccount(new WellsBankAccounts("1001", "SAV", 250.50d, "Jayendran"));
+		tresuryManager.addNewAccount(new WellsBankAccounts("1002", "CHK", 250.00d, "Ramya"));
+		tresuryManager.addNewAccount(new WellsBankAccounts("1003", "CHK", 500.50d, "Jeyaraman"));
+		tresuryManager.addNewAccount(new WellsBankAccounts("1004", "SAV", 1250.50d, "Senthil"));
+		tresuryManager.addNewAccount(new WellsBankAccounts("1005", "CC", 2250.50d, "Siva"));
+		tresuryManager.addNewAccount(new WellsBankAccounts("1006", "SAV", 1250.50d, "Srini"));
+
+		WellsBankTransaction transaction = new WellsBankTransaction(new WellsBankAccounts("1001", "SAV", 0, ""), 15.05d,
+				"DEP");
+		//transaction.performTransaction();
+		transaction.start();
+		System.out.println(transaction.getAccounts().toString().toString());
+
+	}
+
+}

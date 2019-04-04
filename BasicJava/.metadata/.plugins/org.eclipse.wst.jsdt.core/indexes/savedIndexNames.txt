@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/home/jayendrang/IMCSS/BasicJava/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1925357944.index
+3734606513.index
+2887685982.index
+3581026240.index
+1739016184.index
+3036669295.index

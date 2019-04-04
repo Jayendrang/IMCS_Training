@@ -1,0 +1,11 @@
+package AdvanceAssignment6MultiThreadedProg;
+
+public class LoanTransaction implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

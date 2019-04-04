@@ -1,0 +1,16 @@
+package AdvanceAssignment6MultiThreadedProg;
+
+public class DepositTransaction extends Thread{
+
+	private int transactionId;
+	private Account account;
+	private double amount;
+	private int customerId;
+	
+	public DepositTransaction(int transid,Account acc,int custId,double transamount) {
+		this.transactionId=transid;
+		this.account=acc;
+		this.amount=transamount;
+		this.customerId=custId;
+	}
+}

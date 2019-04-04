@@ -1,0 +1,26 @@
+package AdvanceAssignment2Day1;
+
+class EmployeeGrades {
+	int employeeNumber;
+	String employeeName;
+	float customerFeedback1 = 0, customerFeedback2 = 0, customerFeedback3 = 0;
+	double averageFeedback;
+	char grade;
+
+	public EmployeeGrades(int eNum, String name, float custFb1, float custFb2, float custFb3) {
+		this.employeeNumber = eNum;
+		this.employeeName = name;
+		this.customerFeedback1 = custFb1;
+		this.customerFeedback2 = custFb2;
+		this.customerFeedback3 = custFb3;
+	}
+
+}
+
+public class Assignment10abUnderstandingConstructor {
+
+	public static void main(String[] args) {
+
+	}
+
+}

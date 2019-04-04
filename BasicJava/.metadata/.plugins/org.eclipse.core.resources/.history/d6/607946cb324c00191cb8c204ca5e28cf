@@ -1,0 +1,42 @@
+package Assignment2;
+
+class StudentDetails{
+	
+	String name;
+	String [] courses = new String[3];
+	public StudentDetails() {
+	}
+	
+	public StudentDetails(String studentName, String[] courses)
+	{
+		this.name=studentName;
+		this.courses=courses;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String[] getCourses() {
+		return courses;
+	}
+	public void setCourses(String[] courses) {
+		this.courses = courses;
+	}
+	
+}
+
+public class ArrayOfObject {
+
+	public static void main(String[] args) {
+		
+		StudentDetails [] studentDetails = new StudentDetails[4];
+		studentDetails[0] = new StudentDetails("Tony",new String []{"Java","C","C++"} ); 
+		studentDetails[1] = new StudentDetails("Thomas",new String []{"Java","Unix",""} ); 
+		studentDetails[2] = new StudentDetails("Dinil",new String []{"Linux","Oracle",""} ); 
+		studentDetails[3] = new StudentDetails("Devil",new String []{"RDBMS","C#","Oracle"} ); 
+
+	}
+
+}

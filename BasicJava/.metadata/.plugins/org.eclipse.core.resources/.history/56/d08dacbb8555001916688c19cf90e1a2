@@ -1,0 +1,20 @@
+package AdvanceAssignment21GarbageCollection;
+
+class Tyre{
+	
+}
+public class Car {
+	Tyre tyre;
+	String name;
+	
+	void setFeature(Car car) {
+		tyre = new Tyre();
+		car.setName("Fiat Punto");
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+		
+	
+}

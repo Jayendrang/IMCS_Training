@@ -1,0 +1,20 @@
+package AdvanceAssignment2Day1;
+
+import java.util.stream.Stream;
+
+public class ArrayUsage {
+
+	public static void main(String[] args) {
+
+			int inumbers[] = {10,20,40,30,40,10,50};
+			float fnumbers[]= {10f,20f,40f,30f,40f,10f,50f};
+			double dnumbers[]= {10d,20d,40d,30d,40d,10d,50d};
+			char characters[]= {'a','b','c'};
+			
+			Stream.of(inumbers).forEach(a->System.out.println(a));
+			Stream.of(fnumbers).forEach(b->System.out.println(b));
+			Stream.of(dnumbers).forEach(c->System.out.println(c));
+			Stream.of(characters).forEach(ch->System.out.println(ch));
+	}
+
+}
